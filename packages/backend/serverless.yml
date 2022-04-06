@@ -1,0 +1,21 @@
+service: open-registry-backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 128
+  environment:
+    STAGE: ${opt:stage, 'dev'}
+
+plugins:
+  - serverless-plugin-typescript 
+  - serverless-offline
+
+functions:
+  graphql:
+    handler: src/handler.graphqlHandler
+    events:
+      - http:
+          method: post
+          path: graphql
