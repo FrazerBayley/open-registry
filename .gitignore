@@ -1,0 +1,19 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# gts
+.DS_Store
+.nyc_output
+.vscode
+build
+.build
+coverage
+node_modules
+npm-debug.log
+yarn-error.log
+yarn.lock
+__pycache__
